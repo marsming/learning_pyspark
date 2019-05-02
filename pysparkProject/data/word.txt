@@ -1,0 +1,4 @@
+hadoop,spark,hive,spark
+storm,hive,flume,kafka,hadoop
+hadoop,hive,hive,hadoop,hadoop
+spark,python,scala,azkaban
