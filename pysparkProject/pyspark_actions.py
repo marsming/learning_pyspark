@@ -5,9 +5,9 @@
 # @Site    : 
 # @File    : pyspark_actions.py
 # @Software: PyCharm
-from pysparkProject import pyspark_sc
+from pyspark import SparkContext
 
-sc = pyspark_sc.sc
+sc = SparkContext(appName="pyspark_transformations", master="local[2]")
 
 def my_action():
     data = [1,2,3,4,5,6]
