@@ -57,8 +57,19 @@ Spark
 6.一个Task对应一个线程，多个Task可以并行的运行在一个Executor进程中
 
 Spark Cache详解
+    rdd.cache():StorageLevel
+    cache和tranformation:是懒加载的，没有遇到aciton是不会提交作业到spark上运行的
+    如果一个RDD在后续的计算中可能会被使用到，建立cache
+    cache底层调用的是persist方法，传入的参数是：StorageLevel.MEMORY_ONLY
+    persist可以传入存储级别
 
 Spark Lineage详解
 
+
 Spark Dependency详解
+    窄依赖：一个父RDD的partition最多被子RDD的某个partition使用一次
+    map,filter,union,join
+
+    宽依赖：一个父RDD的partition会被子RDD的partition使用多次，有shuffle
+    
 
