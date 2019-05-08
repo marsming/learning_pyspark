@@ -71,5 +71,5 @@ Spark Dependency详解
     map,filter,union,join
 
     宽依赖：一个父RDD的partition会被子RDD的partition使用多次，有shuffle
-    
+
 
